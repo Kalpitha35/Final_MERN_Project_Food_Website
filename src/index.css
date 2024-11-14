@@ -1,0 +1,185 @@
+
+/* *{
+  border: 1px solid red !important;
+} */
+ *{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family:"Playfair Display", serif ;
+ }
+
+ .logo-head{
+  font-family: "Cookie", serif;
+ }
+ li a p{
+  font-family:"Playfair Display", serif ;
+  font-size: 18px;
+  
+ }
+ .header-menu{
+  color: black;
+ }
+ .header-menu:hover{
+  color: white;
+ }
+ .header-section{
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+ }
+ .imgcard:hover{
+  box-shadow: rgba(0,0,0,0.4) 0px 2px 4px, rgba(0,0,0,0.3) 0px 7px 13px -3px, rgba(0,0,0,0.2) 0px -3px 0px inset;
+}
+.category-img{
+  transition: transform 0.5s ease-in-out;
+}
+.category-img:hover{
+  transform: translateY(-20px);
+  
+}
+.view-all-menu{
+  text-decoration: none;
+  margin-left: 550px;
+  border: 1px solid orangered;
+  color: orangered;
+  
+}
+.view-all-menu:hover{
+  background-color: orangered;
+  color: white;
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .container img {
+      height: 50%;
+      animation: rotate 30s infinite linear;
+      margin-top: -600px;
+  }
+
+  .header{
+    background-color: rgb(255, 123, 0);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+  .container-img{
+    height: 100vh;
+    background-color: #021032;
+    
+  }
+  .home-bg{
+    opacity: 0.2;
+    width: 100%;
+    height: 100vh;
+    
+  }
+  .home-head{
+    margin-top: -450px;
+    margin-left: 500px;
+    color: white;
+    opacity: 9;
+    font-size: 80px;
+  }
+  .services{
+    margin-top: 80px;
+  }
+  .cards:hover {
+    background-color: orange;
+  }
+  .icons{
+    color: orange;
+    font-size: 40px;
+  }
+  .cards:hover .icons{
+    color: white;
+  }
+  .text-start{
+    text-align: left !important;
+  }
+  .img-grid {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    
+}
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+.cuisine-list {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 20px 0; /* Add margin to separate from other elements */
+  display: flex; /* Use flexbox for alignment */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center; /* Center the items */
+}
+
+.cuisine-list li {
+  background-color: orange; /* Light background for items */
+  border: 1px solid #dee2e6; /* Add a light border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding inside items */
+  margin: 5px; /* Margin between items */
+  font-weight: bold; /* Make the text bold */
+  transition: background-color 0.3s; /* Smooth background color transition */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.cuisine-list li:hover {
+  background-color: #e9ecef; /* Change background on hover */
+}
+/* .modal-body {
+  background-image: url('https://img.freepik.com/premium-photo/hamburger-with-tomato-it_111797-1673.jpg');
+} */
+.add-food-container {
+  width: 50%;
+  margin: auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-food-form .form-group {
+  margin-bottom: 15px;
+}
+
+.add-food-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.add-food-form input,
+.add-food-form select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+  /* background-color: rgb(234, 235, 237); */
+}
