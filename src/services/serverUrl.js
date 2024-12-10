@@ -1,3 +1,3 @@
 
-const SERVER_URL = "http://localhost:4000"
+const SERVER_URL = "https://final-mern-food-project-server.onrender.com"
 export default SERVER_URL
