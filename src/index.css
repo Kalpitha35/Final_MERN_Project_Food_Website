@@ -183,3 +183,119 @@
   background-color: #218838;
   /* background-color: rgb(234, 235, 237); */
 }
+.card-title {
+  min-height: 2.5rem; /* Adjust based on expected text */
+}
+
+.card-text {
+  min-height: 1.5rem; /* Adjust based on expected text */
+}.card-img-top {
+  object-fit: cover;
+}
+.sign-in-btn:hover {
+  background-color: orange; /* Orange background on hover */
+  color: white; /* White text on hover */
+  border-color: orange; /* Maintain orange border */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.sign-in-btn:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.5); /* Focus ring */
+}
+.btn-warning:hover {
+  background-color: #ff9900;
+  color: white;
+}
+
+.btn-outline-warning:hover {
+  background-color: #ff9900;
+  color: white;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: black; /* Change arrow colors */
+}
+
+
+.slider-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.slick-slider {
+  position: relative;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 10;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 40px;
+  height: 40px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: #f5f5f5;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 20px;
+  color: #000;
+  opacity: 1;
+}
+
+.slick-slide img {
+  display: block;
+  margin: auto;
+}
+
+
+/* Center the dots */
+.slick-dots {
+  bottom: -15px;
+}
+
+/* Style for slider items */
+.slick-slide img {
+  transition: transform 0.3s ease;
+}
+
+.slick-slide img:hover {
+  transform: scale(1.1); /* Zoom on hover */
+}
+ 
+/* view cart pop up css */
+/* Popup container */
+.cart-popup {
+  position: fixed;
+  bottom: -100px; /* Start hidden below the viewport */
+  left: 0;
+  right: 0;
+  background-color: #28a745; /* Green background */
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 1000;
+  transition: bottom 0.5s ease; /* Smooth slide animation */
+}
+
+/* Show the popup */
+.cart-popup.show {
+  bottom: 0; /* Slide up to visible */
+}
+
+
+

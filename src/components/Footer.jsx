@@ -1,65 +1,74 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-   
-    <div style={{backgroundColor:'rgb(255, 123, 0)'}} className='mt-1 container-fluid'>
-    <div style={{height:'300px'}} className='container pt-5  w-100'>
-     <div className="d-flex justify-content-between">
-       <div style={{width:"400px"}} className="intro">
-       <Link style={{textDecoration:"none", color:"white",fontWeight:"600",fontSize:"25px"}} to={'/'}> 
-       <h2  className='text-black  fw-bolder'><i  className="fa-solid fa-utensils icons text-light"></i>  Everyday Eats</h2> 
-         </Link>
-         <p className='mt-3 text-black'>Designed and built with all the love in the world by the Bootstrap team with the help of our contributors.</p>
-         <p className='text-black'>Code licensed MIT, docs CC BY 3.0.</p>
-         <p className='text-black'>Currently v5.3.3.</p>
-       </div>
-       <div>
-         <h2 className="text-black" style={{fontWeight:"600",fontSize:"20px"}}>Links</h2>
-         <Link style={{textDecoration:"none", color:"black",}} to={'/'}> 
-             Home
-         </Link> <br />
-         <Link style={{textDecoration:"none", color:"black",}} to={'/login'}> 
-             Login
-         </Link><br />
-         <Link style={{textDecoration:"none", color:"black",}} to={'/register'}> 
-             Register
-         </Link>
-       </div>
-       <div>
-         <h2 className="text-black" style={{fontWeight:"600",fontSize:"20px"}}>Guides</h2>
-         <Link style={{textDecoration:"none", color:"black",}} to={''}> 
-             React
-         </Link> <br />
-         <Link style={{textDecoration:"none", color:"black",}} to={''}> 
-             React Bootstrap
-         </Link><br />
-         <Link style={{textDecoration:"none", color:"black",}} to={''}> 
-             React Router
-         </Link>
-       </div>
-       <div className="contact">
-       <h2 className="text-black" style={{fontWeight:"600",fontSize:"20px"}}>Contact Us</h2>
-       <input type="text" placeholder='Enter your email here' className='rounded h-25 text-center'  />
-       <button className='btn bg-white ms-1 h-25'><i className="fa-solid fa-arrow-right  " ></i>
-       </button>
-       <br />
-       <div className='d-flex  justify-content-evenly mt-3 text-black'>
-       <i className="fa-solid fa-envelope"></i>
-       <i className="fa-brands fa-twitter"></i>
-       <i className="fa-brands fa-instagram"></i>
-       <i className="fa-brands fa-linkedin"></i>
-       <i className="fa-brands fa-github"></i>
-       <i className="fa-solid fa-phone"></i>
-       </div>
-      
-       </div>
-     </div>
-    
-   </div>
-  </div>
-  )
-}
+    <div style={{ backgroundColor: 'rgb(255, 123, 0)', color: 'black' }} className="mt-1 container-fluid">
+      <div className="container pt-5 pb-4">
+        <div className="d-flex justify-content-between flex-wrap">
+          {/* Brand Section */}
+          <div style={{ maxWidth: '400px' }} className="mb-4">
+            <Link style={{ textDecoration: "none", color: "black", fontWeight: "700", fontSize: "25px" }} to={'/'}>
+              <h2>
+                <i className="fa-solid fa-utensils icons me-2 text-light"></i>
+                Everyday Eats
+              </h2>
+            </Link>
+            <p className="mt-3">
+              "Experience the joy of delicious meals at your fingertips! Everyday Eats offers a wide range of dishes to satisfy your cravings, whether you're dining in or on the go."
+            </p>
+          </div>
 
-export default Footer
+          {/* Links Section */}
+          <div className="mb-4">
+            <h4 style={{ fontWeight: "600", fontSize: "20px" }}>Quick Links</h4>
+            <ul className="list-unstyled">
+              <li><Link style={{ textDecoration: "none", color: "black" }} to={'/'}>Home</Link></li>
+              <li><Link style={{ textDecoration: "none", color: "black" }} to={'/menu'}>Menu</Link></li>
+              <li><Link style={{ textDecoration: "none", color: "black" }} to={'/about'}>About Us</Link></li>
+              <li><Link style={{ textDecoration: "none", color: "black" }} to={'/contact'}>Contact Us</Link></li>
+            </ul>
+          </div>
+
+          {/* Resources Section */}
+          <div className="mb-4">
+            <h4 style={{ fontWeight: "600", fontSize: "20px" }}>Resources</h4>
+            <ul className="list-unstyled">
+              <li><Link style={{ textDecoration: "none", color: "black" }} to={'/docs/react'}>React</Link></li>
+              <li><Link style={{ textDecoration: "none", color: "black" }} to={'/docs/bootstrap'}>React Bootstrap</Link></li>
+              <li><Link style={{ textDecoration: "none", color: "black" }} to={'/docs/router'}>React Router</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact Section */}
+          <div className="mb-4">
+            <h4 style={{ fontWeight: "600", fontSize: "20px" }}>Stay Connected</h4>
+            <div className="d-flex align-items-center mb-3">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="form-control me-2"
+                style={{ maxWidth: '200px', color: 'black' }}
+              />
+              <button className="btn btn-light"><i className="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div className="d-flex gap-3">
+              <a href="mailto:support@everydayeats.com" className="text-black"><i className="fa-solid fa-envelope"></i></a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-black"><i className="fa-brands fa-twitter"></i></a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-black"><i className="fa-brands fa-instagram"></i></a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-black"><i className="fa-brands fa-linkedin"></i></a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-black"><i className="fa-brands fa-github"></i></a>
+              <a href="tel:+1234567890" className="text-black"><i className="fa-solid fa-phone"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr style={{ borderColor: 'black' }} />
+        <div className="text-center pt-2">
+          <p className="mb-0">&copy; 2024 Everyday Eats. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;

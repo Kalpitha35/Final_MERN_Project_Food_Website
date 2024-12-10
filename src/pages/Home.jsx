@@ -1,12 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Card from 'react-bootstrap/Card';
 import About from '../components/About';
 import Menu from '../components/Menu';
 import Header from '../components/Header'
 import MenuCategory from '../components/MenuCategory';
+import { getAllFoodsFromDbAPI } from '../services/allAPI';
 
 
 const Home = () => {
+
+  const [allFoods,setAllFoods]= useState([])
+
+  useEffect(()=>{
+    getAllFoodsFromDb()
+},[])
+const getAllFoodsFromDb =async()=> {
+ try{
+    const result = await getAllFoodsFromDbAPI()
+    if(result.status==200){
+      setAllFoods(result.data)
+    }
+ }catch(err){
+    console.log(err);
+    
+ }
+}
+console.log(allFoods);
+  
   return (
     <>
     <Header insideHomeCart={false} insideHome={true}/>
@@ -17,7 +37,8 @@ const Home = () => {
        <img width={'400px'} height={'400px'}src="https://themewagon.github.io/restoran/img/hero.png" alt="" />
        <h1 className='fw-bolder home-head'>Enjoy Our Delicious Meal</h1>
        </div>
-      <section id='menu'> <Menu/></section>
+       {/* <FoodSlider/> */}
+      <section id='menu'> <Menu displayFoods={allFoods} /></section>
       <MenuCategory/>
        <div id='service' className='services d-flex justify-content-evenly align-items-center flex-row'>
        <Card className='cards' style={{ width: '18rem', color:'black' }}>

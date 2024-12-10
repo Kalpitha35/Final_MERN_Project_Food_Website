@@ -44,10 +44,7 @@ const Wishlist = () => {
     </div>
   </>
 
-  {/* <div className="d-flex flex-column justify-content-center align-items-center mt-5">
-    <img src="https://www.adanione.com/~/media/Foundation/Adani/emptyImages/empty_cart.gif" alt="" />
-    <h1 className="text-danger fw-bold display-6 mt-4">Your Wishlist is Empty!!!</h1>
-  </div> */}
+ 
 </div>
 
     </>

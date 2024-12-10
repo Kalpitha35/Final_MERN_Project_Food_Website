@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaSearch, FaBell, FaUserCircle } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import Dropdown from 'react-bootstrap/Dropdown';
+import { tokenAuthContext } from '../contexts/AuthContextApi';
 
 const AdminHeader = () => {
+  const {isAuthorised,setIsAuthorised} = useContext(tokenAuthContext)
+  const navigate = useNavigate()
+
+  const handleLogout = () => {
+    // Clear user session (localStorage/sessionStorage/cookies)
+    sessionStorage.removeItem('token'); // Example: remove token
+    sessionStorage.removeItem('user');  // Example: remove user data
+    setIsAuthorised(false)
+    // Redirect to login or home page
+    navigate('/login');
+  };
 
     
   return (
@@ -31,17 +44,18 @@ const AdminHeader = () => {
                Home
               </Link>
             </li>
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle text-light" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <FaUserCircle className="me-1" />
-                Admin
-              </a>
-              <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><a className="dropdown-item" href="#">Profile</a></li>
-                <li><a className="dropdown-item" href="#">Settings</a></li>
-                <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="#">Logout</a></li>
-              </ul>
+            <li>
+              <Dropdown>
+                 <Dropdown.Toggle variant="light" id="dropdown-basic">
+                 <FaUserCircle className="me-1" /> Admin</Dropdown.Toggle>
+  
+                 <Dropdown.Menu>
+                 {/* <Dropdown.Item href="#">Profile</Dropdown.Item>
+                 <Dropdown.Item href="#">Settings</Dropdown.Item>
+                 <Dropdown.Divider /> */}
+                 <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
+                 </Dropdown.Menu>
+              </Dropdown>
             </li>
           </ul>
         </div>

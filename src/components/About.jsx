@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <>
-        <div  className="row m-2">
+        <div id='about'  className="row m-2">
 
            <div className='col-lg-6'>
               <div style={{marginLeft:'40px', marginTop:'50px'}} className='row'>
